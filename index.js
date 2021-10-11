@@ -25,11 +25,16 @@ function calcSum(birthDate){
 }
 
 function compare(sum,luckyNo){
-    if(sum % luckyNo === 0){
-        response.innerText = "Yayy! Your Birthday Is Lucky 😍"
-    }
-    else{
-        response.innerText = "Sorry! Your Birthday Is Not Lucky 🥺"
+    if(luckyNo > 0){
+
+        if(sum % luckyNo === 0){
+            response.innerText = "Yayy! Your Birthday Is Lucky 😍"
+        }
+        else{
+            response.innerText = "Sorry! Your Birthday Is Not Lucky 🥺"
+        }
+    }else{
+        response.innerText = "lucky number can't be negative"
     }
 }
 
